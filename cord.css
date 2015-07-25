@@ -1,0 +1,91 @@
+body {
+    background: gray;
+}
+
+div.cord {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    background: white;
+    border: 1px black;
+}
+
+svg.cord {
+    width: 640px;
+    height: 480px;
+}
+
+rect.cord-node {
+    fill: rgb(246, 248, 248);
+    stroke: rgb(192, 192, 192);
+}
+
+polygon.cord-msg {
+    fill: rgb(246, 248, 248);
+    stroke: rgb(192, 192, 192);
+}
+
+g.cord-flash > polygon.cord-msg {
+    stroke: rgb(80, 80, 80);
+    stroke-width: 2px;
+}
+
+rect.cord-port {
+    fill: rgb(80, 80, 128);
+}
+
+circle.cord-button {
+    fill: none;
+    stroke: rgb(80, 80, 80);
+}
+
+g.cord-flash > circle.cord-button {
+    fill: rgb(80, 80, 80);
+}
+
+line.cord-toggle {
+    stroke: rgb(80, 80, 80);
+    stroke-width: 2px;
+    visibility: hidden;
+}
+
+g.cord-toggle-on > line.cord-toggle {
+    visibility: visible;
+}
+
+text.cord-node-name {
+    font: 14px Inconsolata;
+}
+
+g.selected > rect.cord-node {
+    stroke: rgb(0, 0, 240)
+}
+
+g.selected > circle.cord-button {
+    stroke: rgb(0, 0, 240)
+}
+
+g.selected > line.cord-toggle {
+    stroke: rgb(0, 0, 240)
+}
+
+g.selected > text.cord-node-name {
+    fill: rgb(0, 0, 240)
+}
+
+line.cord-message-cord {
+    stroke: rgb(80, 80, 80);
+    stroke-width: 1px;
+}
+
+line.cord-audio-cord1 {
+    stroke: #DBFD8A;
+    stroke-width: 2.5px;
+    stroke-dasharray: 3, 3;
+}
+
+line.cord-audio-cord2 {
+    stroke: #363F22;
+    stroke-width: 2.5px;
+    stroke-dasharray: 0, 3, 3, 0;
+}
