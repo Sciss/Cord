@@ -16,3 +16,8 @@ This project is in early stage, so not much to see here yet.
 
 Cord builds using sbt with the scala-js plugin. To compile: `sbt fastOptJS`. Then open `index-fastopt.html` in 
 a browser. Cord has been tested with Firefox and Chromium.
+
+## contributing
+
+Please see the file [CONTRIBUTING.md](CONTRIBUTING.md)
+
