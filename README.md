@@ -12,6 +12,8 @@ with absolutely no warranties. To contact the author, send an email to `contact 
 
 This project is in early stage, so not much to see here yet.
 
+<img src="screenshot.png" alt="screenshot"/>
+
 ## requirements / installation
 
 Cord builds using sbt with the scala-js plugin. To compile: `sbt fastOptJS`. Then open `index-fastopt.html` in 
