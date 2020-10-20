@@ -2,7 +2,7 @@
  *  Elem.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -13,8 +13,12 @@
 
 package de.sciss.cord
 
+import de.sciss.cord
 import de.sciss.cord.impl.{CordImpl, SingleInlet, SingleOutlet}
 import de.sciss.cord.view.{PatcherView, View}
+
+import scala.scalajs.js
+import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
 sealed trait Elem extends Disposable {
   def parent: Patcher
@@ -37,7 +41,12 @@ trait ObjNode extends Node {
   def name: String
 }
 
+@JSExportTopLevel("cord")
 object Cord {
+  @JSExport val M         = cord.M
+  @JSExport val Demo      = cord.Demo
+  @JSExport val Registry  = cord.Registry
+
   def apply(source: Outlet, sink: Inlet): Cord = new CordImpl(source, sink)
 }
 trait Cord extends Elem {

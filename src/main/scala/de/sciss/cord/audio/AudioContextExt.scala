@@ -2,7 +2,7 @@
  *  AudioContextExt.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -18,6 +18,7 @@ import org.scalajs.dom.AudioContext
 import scala.scalajs.js
 
 /** Includes extensions not present in the original `AudioContext` class. */
+@js.native
 trait AudioContextExt extends AudioContext {
   /** The `createScriptProcessor()` method of the `AudioContext` interface creates
     * a `ScriptProcessorNode` used for direct audio processing.

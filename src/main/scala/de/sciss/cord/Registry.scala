@@ -2,7 +2,7 @@
  *  Registry.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -14,9 +14,9 @@
 package de.sciss.cord
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
-@JSExport("cord.Registry")
+//@JSExportTopLevel("cord.Registry")
 object Registry {
   type Fun = js.Function1[M, Unit]
   
@@ -46,7 +46,8 @@ object Registry {
     if (idx < 0) throw new NoSuchElementException((name, fun).toString())
     xs.remove(idx)
     if (xs.isEmpty) {
-      map.delete(name)
+      map.remove(name)
+//      map.delete(name)
     }
   }
 

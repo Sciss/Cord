@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Cord</title>
-    <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
     <link href="cord.css" rel="stylesheet">
-    <script type="text/javascript" src="./target/scala-2.11/cord-fastopt.js"></script>
+    <script type="text/javascript" src="./target/scala-2.13/cord-fastopt.js"></script>
+<!--
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function(e) {
-            cord.Demo().main();
+            cord.Demo.main();
         });
     </script>
+-->
 </head>
 <body>
+<button onclick="cord.Demo.main();">Click to Start</button>
 </body>
 </html>

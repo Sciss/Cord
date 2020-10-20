@@ -2,7 +2,7 @@
  *  ScriptProcessorNode.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -25,6 +25,7 @@ import scala.scalajs.js
   * interface, is sent to the object each time the input buffer contains new data,
   * and the event handler terminates when it has filled the output buffer with data.
   */
+@js.native
 trait ScriptProcessorNode extends AudioNode {
   /** Returns an integer representing both the input and output buffer size.
     * Its value can be a power of 2 value in the range 256--16384.
@@ -38,6 +39,7 @@ trait ScriptProcessorNode extends AudioNode {
 /** The Web Audio API `AudioProcessingEvent` represents events that occur when a
   * `ScriptProcessorNode` input buffer is ready to be processed.
   */
+@js.native
 trait AudioProcessingEvent extends Event {
   /** The time when the audio will be played, as defined by the time of
     * `AudioContext.currentTime`

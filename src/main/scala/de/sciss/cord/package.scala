@@ -2,7 +2,7 @@
  *  package.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -20,12 +20,13 @@ import cord.view.IntPoint2D
 
 import scala.language.implicitConversions
 import scala.scalajs.js
+import scala.scalajs.js.annotation.JSExportTopLevel
 
 package object cord {
   implicit def AudioContextExt(context: AudioContext): AudioContextExt =
     context.asInstanceOf[AudioContextExt]
 
-  val isMac: Boolean = dom.navigator.platform.startsWith("Mac")
+  val isMac: Boolean = false // XXX TODO dom.navigator.platform.startsWith("Mac")
 
   /////////////////////////////
 

@@ -8,6 +8,8 @@ import org.scalajs.dom.html.Canvas
 import scala.scalajs.js
 import scalatags.JsDom.all._
 
+import scala.scalajs.js.timers.SetIntervalHandle
+
 class Meter { meter =>
   private var lastPeak  = 0.0
   private var lastRMS   = 0.0
@@ -74,11 +76,11 @@ class Meter { meter =>
     analyze
   }
 
-  private var animHandle = Int.MinValue
+  private var animHandle: SetIntervalHandle = null
 
   private def startAnimation(): Unit = {
     stopAnimation()
-    animHandle = setInterval(animStep _, 33.3)
+    animHandle = js.timers.setInterval(33.3)(animStep _)
   }
 
   private val ampdbFactor = 20 / js.Math.log(10)
@@ -122,9 +124,9 @@ class Meter { meter =>
   }
 
   private def stopAnimation(): Unit = {
-    if (animHandle != Int.MinValue) {
-      clearInterval(animHandle)
-      animHandle = Int.MinValue
+    if (animHandle != null) {
+      js.timers.clearInterval(animHandle)
+      animHandle = null
     }
   }
 }

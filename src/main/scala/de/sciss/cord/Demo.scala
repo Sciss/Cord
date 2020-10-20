@@ -2,7 +2,7 @@
  *  Player.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz. All rights reserved.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz. All rights reserved.
  *
  *	This software is published under a BSD 2-Clause License.
  *
@@ -16,10 +16,11 @@ package de.sciss.cord
 import org.scalajs.dom
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
-@JSExport("cord.Demo")
-object Demo extends js.JSApp {
+//@JSExportTopLevel("cord.Demo")
+object Demo /*extends js.JSApp*/ {
+  @JSExport
   def main(): Unit = {
     val patcher     = Patcher()
 

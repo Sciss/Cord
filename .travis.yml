@@ -1,7 +1,9 @@
+dist: trusty
+
 language: scala
 
 scala:
-  - 2.11.7
+  - 2.13.3
 
 jdk:
-  - openjdk7
+  - openjdk11

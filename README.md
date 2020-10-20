@@ -1,13 +1,13 @@
 # Cord
 
-[![Build Status](https://travis-ci.org/Sciss/Cord.svg?branch=master)](https://travis-ci.org/Sciss/Cord)
+[![Build Status](https://travis-ci.org/Sciss/Cord.svg?branch=main)](https://travis-ci.org/Sciss/Cord)
 
 ## statement
 
 Cord is a patcher system for the browser, utilising Scala.js and the Web Audio API. 
-It is (C)opyright 2015 by Hanns Holger Rutz. All rights reserved. Cord is released under 
-the [GNU Lesser General Public License](https://raw.github.com/Sciss/Cord/master/LICENSE) v2.1+ and comes 
-with absolutely no warranties. To contact the author, send an email to `contact at sciss.de`
+It is (C)opyright 2015–2020 by Hanns Holger Rutz. All rights reserved. Cord is released under 
+the [GNU Lesser General Public License](https://raw.github.com/Sciss/Cord/main/LICENSE) v2.1+ and comes 
+with absolutely no warranties. To contact the author, send an e-mail to `contact at sciss.de`.
 
 This project is in early stage, so not much to see here yet.
 

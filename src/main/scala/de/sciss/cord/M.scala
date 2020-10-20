@@ -2,7 +2,7 @@
  *  M.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -14,14 +14,15 @@
 package de.sciss.cord
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.JSConverters.iterableOnceConvertible2JSRichIterableOnce
+import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
 object M {
   val Bang = M(de.sciss.cord.Bang)
 }
-@JSExport("cord.M")
+//@JSExportTopLevel("cord.M")
 case class M(atoms: Any*) {
-  @JSExport("atoms") def toArray: js.Array[Any] = atoms.to[js.Array]
+  @JSExport("atoms") def toArray: js.Array[Any] = atoms.toJSArray
 
   override def toString = atoms.mkString(s"$productPrefix(", ", ", ")")
 }

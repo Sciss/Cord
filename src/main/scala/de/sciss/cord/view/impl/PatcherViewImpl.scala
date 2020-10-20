@@ -2,7 +2,7 @@
  *  PatcherViewImpl.scala
  *  (Cord)
  *
- *  Copyright (c) 2015 Hanns Holger Rutz.
+ *  Copyright (c) 2015-2020 Hanns Holger Rutz.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -20,7 +20,7 @@ import de.sciss.cord.objects.Button
 import org.scalajs.dom
 
 import scala.annotation.switch
-import scala.collection.{breakOut, mutable}
+import scala.collection.mutable
 import scalatags.JsDom.all._
 import scalatags.JsDom.svgTags._
 
@@ -113,7 +113,7 @@ class PatcherViewImpl(val patcher: Patcher)
             if (selection.nonEmpty) {
               val toRemove = selection.get
               selection.clear()
-              patcher.remove(toRemove.map(_.elem)(breakOut): _*)
+              patcher.remove(toRemove.iterator.map(_.elem).toSeq: _*)
             }
             e.preventDefault()
           }
